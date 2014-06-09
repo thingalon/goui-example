@@ -1,0 +1,57 @@
+body {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 14px;
+	background-color: #eee;
+}
+
+h1 {
+	font-size: 18px;
+	background-color: #ccc;
+	padding: 10px 10px 10px 25px;
+}
+
+h2 {
+	font-size: 16px;
+	margin-top: 0px;
+}
+
+p {
+	margin: 10px 25px 10px 25px;
+}
+
+div.sample-box {
+	margin: 10px 25px 10px 25px;
+	padding: 10px;
+	background-color: #ddd;
+	border: 1px solid #ccc;
+}
+
+.right {
+	float: right;
+}
+
+div.output-box {
+	font-family: courier-new, courier, fixed;
+	background-color: white;
+	border: 1px solid #ccc;
+	overflow: scroll;
+	max-height: 150px;
+}
+
+div.field {
+	width: 100%;
+	margin-bottom: 10px
+}
+
+div.field span {
+	display: inline-block;
+}
+
+div.field span.label {
+	font-weight: bold;
+	width: 15em;
+}
+
+div.field span.value {
+	width: 30em;
+}

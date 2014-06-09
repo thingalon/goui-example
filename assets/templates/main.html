@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<title>Goui Example</title>
+		<script src="/goui.js"></script>
+		<script src="../js/jquery-2.1.1.min.js"></script>
+		<script src="../js/jquery-ui-1.10.4.min.js"></script>
+		<script src="../js/main.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/main.css">
+		<link rel="stylesheet" href="../css/jquery-ui-1.10.4.min.css" />
+	</head>
+	
+	<body>
+		<h1>Hi, <span id="name">user</span>!</h1>
+		
+		<p>
+			This slightly ugly sample app demonstrates how to set up windows and populate them with goui. 
+			What it <i>doesn't</i> demonstrate is how to make your apps look pretty.
+		</p>
+		
+		<p>
+			Every goui window is just a web view that you can populate with any HTML, CSS and JavaScript you like,
+			so making it look pretty is up to you. This example uses jQuery to handle some of the JS goop 
+			automagically, but you can use any JavaScript libraries you like.
+		</p>
+		
+		<p>Here are a few things you can play with, to see how window management and message passing works:</p>
+
+		<div class="sample-box">
+			<h2>Modal popups</h2>
+
+			<p>
+				Type some stuff here: <input id="modal-input" type="text" value="Stuff.">, and click this here button: 
+				<button id="example-popup">Show Popup</button>
+			</p>
+		</div>
+		
+		<div class="sample-box">
+			<h2>Doing things in the background</h2>
+			
+			<p>
+				Most GUI systems will only work when called from the main thread, and hog the main thread for the life
+				of your program. That's still sort-of true with goui, but it's super easy to spawn as many goroutines
+				as you like to keep things ticking along in the background.
+			</p>
+			
+			<p>
+				Try it out by spawning a few threads with different timing:
+			</p>
+			
+			<div class="field">
+				<span class="label">Thread duration (seconds):</span>
+				<span class="value"><div id="duration-slider"></div></span>
+				<span class="note" id="duration-description">60 seconds</span>
+			</div>
+
+			<div class="field">
+				<span class="label">Time between messages:</span>
+				<span class="value"><div id="speed-slider"></div></span>
+				<span class="note"><div id="speed-description">1.5 seconds</div></span>
+			</div>
+
+			<div class="field">
+				<span class="label"></span>
+				<span class="value"><button id="spawn-thread">Spawn Thread!</button></span>
+			</div>
+			
+			<div id="thread-output" class="output-box">
+				
+			</div>
+		</div>
+	</body>
+</html>

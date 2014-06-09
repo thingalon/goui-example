@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>Popup</title>
+		<script src="/goui.js"></script>
+		<script src="../js/jquery-2.1.1.min.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="../css/main.css">
+	</head>
+	
+	<body>
+		<h1>Oh hello!</h1>
+
+		<p>You clicked the popup, after entering this here text:</p>
+
+		<div class="sample-box" id="entered-text">
+		</div>
+		
+		<p>
+			BTW, this window is not resizable and has no red close button in the top corner. The only way to
+			close this window is with this button:
+		</p>
+		
+		<p class="right">
+			<button id="ok">Ok</button>
+		</p>
+	</body>
+	
+	<script>
+		goui.SetMessageHandler('showMessage', function(data) {
+			$('#entered-text').html(data.inputText);
+		});
+		goui.Init();
+		
+		$("#ok").click(function() {
+			goui.CloseWindow();
+		});
+	</script>
+</html>
