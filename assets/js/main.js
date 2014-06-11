@@ -29,12 +29,12 @@ $(document).ready(function() {
 	});
 	
 	$('#example-popup').click(function() {
-		goui.SendMessage('examples.showPopup', {data:$('#modal-input').val()});
+		goui.Send('examples.showPopup', {data:$('#modal-input').val()});
 	});
 	
 	$('#spawn-thread').click(function() {
 		var duration = $('#duration-slider').slider('option', 'value');
 		var speed = $('#speed-slider').slider('option', 'value');
-		goui.SendMessage('examples.spawnThread', {duration:duration, speed:speed});
+		goui.Send('examples.spawnThread', {duration:duration, speed:speed});
 	});
 });

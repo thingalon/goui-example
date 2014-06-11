@@ -51,7 +51,7 @@ func showExamplePopup(window *goui.Window, request *goui.Message) (response goui
 	
 	popupWindow := goui.OpenWindow(goui.WindowOptions{
 		Template: "templates/popup.html",
-		StyleFlags: goui.WindowModal,
+//		StyleFlags: goui.WindowModal,
 		Centered: true,
 		PixelWidth: 500, PixelHeight: 250,
 	})
